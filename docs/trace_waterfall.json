@@ -1,29 +1,225 @@
 [
   {
     "step": 1,
-    "query": "Chào bạn, bạn có thể giới thiệu quy chế học vụ cơ bản của Đại học VinUni không?",
+    "query": "Bạn có thể hướng dẫn các nguyên tắc vệ sinh và thông thoáng chuồng gà không?",
     "action_type": "FINAL_ANSWER",
-    "thought": "Câu hỏi chung về quy chế học vụ, trả lời trực tiếp không cần gọi Tool.",
-    "output": "[Mock Agent Response]: Xin chào! Quy chế học vụ VinUni yêu cầu sinh viên tích lũy tối thiểu 120 tín chỉ và duy trì GPA trên 2.0 để tốt nghiệp.",
-    "latency_ms": 2845.93
+    "thought": "Gemini phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
+    "output": "Dưới đây là các nguyên tắc cơ bản về vệ sinh và thông thoáng chuồng gà giúp đảm bảo sức khỏe đàn gà và hạn chế nguy cơ phát sinh dịch bệnh:\n\n---\n\n### 1. Nguyên tắc thông thoáng chuồng nuôi (Thông gió)\n* **Đảm bảo lưu thông không khí:** Chuồng nuôi cần thiết kế sao cho không khí tươi mới luân chuyển liên tục, giúp giảm nồng độ khí độc (như $NH_3, H_2S$), hơi ẩm và bụi bẩn.\n* **Tránh gió lùa trực tiếp:** Thông thoáng phải đi đôi với giữ ấm, tránh gió lùa mạnh đánh trực tiếp vào đàn gà, nhất là gà con hoặc trong mùa lạnh.\n* **Kiểm soát nhiệt độ và độ ẩm:** Giữ chuồng nuôi luôn khô ráo, tránh tình trạng quá nóng hoặc độ ẩm quá cao gây nấm mốc và vi khuẩn phát triển.\n\n---\n\n### 2. Nguyên tắc vệ sinh và sát trùng chuồng trại\n* **Quét dọn và làm sạch cơ học:** Định kỳ dọn dẹp phân, chất đệm lót chuồng cũ, màng nhện và bụi bẩn bám trên tường, trần, dụng cụ chăn nuôi.\n* **Sát trùng định kỳ:** Sử dụng các loại thuốc sát trùng chuồng trại phù hợp theo hướng dẫn của nhà sản xuất hoặc khuyến cáo của bác sĩ thú y để phun xịt xung quanh và bên trong chuồng.\n* **Thay lót chuồng:** Đệm lót chuồng (trấu, mạt cưa,...) cần giữ khô ráo, thay mới hoặc xử lý ngay khi bị ẩm ướt, vón cục.\n* **Vệ sinh máng ăn, máng uống:** Rửa sạch và phơi khô máng ăn, máng uống thường xuyên để tránh nấm mốc và vi khuẩn bám dính.\n\n---\n\n### 3. Nguyên tắc an toàn sinh học\n* **Kiểm soát người và phương tiện ra vào:** Hạn chế người lạ vào khu vực nuôi; có hố sát trùng hoặc ủng/giày riêng khi vào chuồng.\n* **Phát hiện và cách lý kịp thời:** Theo dõi đàn gà hàng ngày. Nếu phát hiện gà có dấu hiệu ủ rũ, bỏ ăn hay triệu chứng bất thường, cần cách ly ngay để theo dõi và xử lý.\n\n---\n\n📌 **Lưu ý:** Nếu đàn gà của bạn đang gặp phải bất kỳ triệu chứng hoặc dấu hiệu bất thường nào (như ho, khó thở, tiêu chảy, ủ rũ...), hãy mô tả cụ thể triệu chứng để tôi hỗ trợ tra cứu các nguy cơ sức khỏe tiềm ẩn!",
+    "latency_ms": 7601.21
   },
   {
     "step": 1,
-    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
+    "query": "Đàn gà có biểu hiện khò khè, chảy nước mũi và bỏ ăn. Hãy tra cứu các nguy cơ sức khỏe có thể xảy ra.",
     "action_type": "TOOL_EXECUTION",
-    "tool_name": "academic_query",
+    "tool_name": "chicken_query",
     "arguments": {
-      "student_id": "SV2026001"
+      "query": "Đàn gà khò khè, chảy nước mũi và bỏ ăn"
     },
-    "observation": {},
-    "latency_ms": 799.12
+    "observation": {
+      "status": "SUCCESS",
+      "query": "Đàn gà khò khè, chảy nước mũi và bỏ ăn",
+      "risk_count": 2,
+      "risks": [
+        {
+          "risk_name": "Nguy cơ bệnh hô hấp",
+          "risk_score": 0.89,
+          "matched_signals": [
+            "khò khè",
+            "chảy nước mũi"
+          ],
+          "evidence": "Các dấu hiệu liên quan đến đường hô hấp xuất hiện trong mô tả.",
+          "recommended_next_step": "Kiểm tra thông gió, mật độ đàn và cách ly khu vực có dấu hiệu bất thường.",
+          "rank": 1
+        },
+        {
+          "risk_name": "Nguy cơ rối loạn tiêu hóa",
+          "risk_score": 0.82,
+          "matched_signals": [
+            "bỏ ăn"
+          ],
+          "evidence": "Mô tả có dấu hiệu bất thường về tiêu hóa hoặc lượng ăn.",
+          "recommended_next_step": "Kiểm tra nước uống, thức ăn và theo dõi số lượng cá thể bị ảnh hưởng.",
+          "rank": 2
+        }
+      ],
+      "disclaimer": "Kết quả là đánh giá nguy cơ từ dữ liệu Mock, không phải chẩn đoán xác định. Hãy liên hệ bác sĩ thú y khi đàn có dấu hiệu nghiêm trọng."
+    },
+    "llm_latency_ms": 2135.82,
+    "tool_latency_ms": 0.0,
+    "latency_ms": 2135.82
   },
   {
     "step": 2,
-    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
+    "query": "Đàn gà có biểu hiện khò khè, chảy nước mũi và bỏ ăn. Hãy tra cứu các nguy cơ sức khỏe có thể xảy ra.",
     "action_type": "FINAL_ANSWER",
-    "thought": "Tổng hợp kết quả từ MCP Server thành công.",
-    "output": "Chưa thể trả lời chi tiết do chưa nhận được dữ liệu từ MCP Server (hãy hoàn thành TODO 2.1).",
-    "latency_ms": 10.0
+    "thought": "Gemini phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
+    "output": "Dựa trên thông tin triệu chứng bạn cung cấp và kết quả tra cứu nguy cơ sức khỏe, dưới đây là tổng hợp đánh giá và các bước khuyến nghị tiếp theo:\n\n### 1. Nguy cơ sức khỏe được phát hiện\n- **Nguy cơ bệnh hô hấp (Độ ưu tiên 1 - Điểm nguy cơ: 0.89)**\n  - *Căn cứ:* Dấu hiệu \"khò khè\" và \"chảy nước mũi\".\n  - *Bằng chứng:* Các triệu chứng hô hấp rõ ràng xuất hiện trong mô tả.\n- **Nguy cơ rối loạn tiêu hóa (Độ ưu tiên 2 - Điểm nguy cơ: 0.82)**\n  - *Căn cứ:* Dấu hiệu \"bỏ ăn\".\n  - *Bằng chứng:* Có sự sụt giảm/bất thường về việc tiêu thụ thức ăn.\n\n---\n\n### 2. Các bước chăm sóc khuyến nghị tiếp theo\n- **Đối với nguy cơ hô hấp:** Kiểm tra lại độ thông thoáng của chuồng trại, mật độ nuôi và tiến hành cách ly ngay các cá thể hoặc khu vực gà có biểu hiện bất thường.\n- **Đối với nguy cơ tiêu hóa:** Kiểm tra chất lượng nước uống, thức ăn và tiếp tục theo dõi sát số lượng gà bị ảnh hưởng.\n\n---\n\n### 3. Khuyến cáo an toàn\n*Lưu ý: Kết quả trên là đánh giá nguy cơ dựa trên triệu chứng mô tả, không phải chẩn đoán bệnh xác định và không tự động kê đơn thuốc. Nếu đàn gà có biểu hiện diễn biến nghiêm trọng hoặc lây lan nhanh, bạn nên liên hệ trực tiếp với bác sĩ thú y để được thăm khám và điều trị kịp thời.*",
+    "latency_ms": 4955.71
+  },
+  {
+    "step": 1,
+    "query": "Hãy lập lịch kiểm tra nhiệt độ và hệ thống thông gió chuồng gà vào 14:00 15/09/2026 vì nghi ngờ stress nhiệt.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "care_warning",
+    "arguments": {
+      "disease_name": "Stress nhiệt",
+      "query": "Kiểm tra nhiệt độ và hệ thống thông gió chuồng gà",
+      "datetime_str": "14:00 15/09/2026"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "warning_id": "CARE-0001",
+      "task": "Kiểm tra nhiệt độ và hệ thống thông gió chuồng gà",
+      "scheduled_at": "14:00 15/09/2026",
+      "risk_name": "Stress nhiệt",
+      "message": "Đã tạo cảnh báo chăm sóc 'Kiểm tra nhiệt độ và hệ thống thông gió chuồng gà' vào lúc 14:00 15/09/2026 cho nguy cơ 'Stress nhiệt'."
+    },
+    "llm_latency_ms": 3091.47,
+    "tool_latency_ms": 1.98,
+    "latency_ms": 3093.45
+  },
+  {
+    "step": 2,
+    "query": "Hãy lập lịch kiểm tra nhiệt độ và hệ thống thông gió chuồng gà vào 14:00 15/09/2026 vì nghi ngờ stress nhiệt.",
+    "action_type": "FINAL_ANSWER",
+    "thought": "Gemini phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
+    "output": "Đã tạo thành công cảnh báo công việc chăm sóc cho đàn gà với các thông tin chi tiết như sau:\n\n**1. Thông tin lịch chăm sóc đã tạo:**\n- **Mã cảnh báo:** CARE-0001\n- **Nội dung công việc:** Kiểm tra nhiệt độ và hệ thống thông gió chuồng gà\n- **Thời gian thực hiện:** 14:00 ngày 15/09/2026\n- **Nguy cơ nghi ngờ liên quan:** Stress nhiệt\n\n**2. Căn cứ:**\n- Dữ liệu ghi nhận thành công từ hệ thống tạo lịch/cảnh báo chăm sóc dựa trên yêu cầu theo dõi nguy cơ stress nhiệt.\n\n**3. Bước chăm sóc tiếp theo:**\n- Thực hiện kiểm tra nhiệt độ chuồng nuôi, độ ẩm, và sự vận hành của quạt/hệ thống thông gió vào đúng thời gian đã đặt lịch.\n- Theo dõi các biểu hiện của đàn gà như há miệng thở, dang cánh, giảm ăn hoặc uống nước nhiều hơn bình thường.\n- Đảm bảo cung cấp đủ nước uống mát và sạch cho đàn gà.\n\n**4. Khuyến cáo an toàn:**\n- Lịch kiểm tra và thông tin nguy cơ stress nhiệt mang tính chất hỗ trợ quản lý và theo dõi chăm sóc đàn gà, không phải là chẩn đoán y tế xác định.\n- Nếu đàn gà có dấu hiệu kiệt sức hoặc tỷ lệ bất thường tăng cao, vui lòng liên hệ ngay với bác sĩ thú y để được tư vấn và hỗ trợ xử lý kịp thời.",
+    "latency_ms": 4199.74
+  },
+  {
+    "step": 1,
+    "query": "Đàn gà đang thở gấp, há mỏ và có dấu hiệu nóng. Hãy tra cứu nguy cơ trước, sau đó nếu phù hợp lập lịch kiểm tra nhiệt độ chuồng vào 14:00 15/09/2026.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "chicken_query",
+    "arguments": {
+      "query": "thở gấp, há mỏ, có dấu hiệu nóng"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "query": "thở gấp, há mỏ, có dấu hiệu nóng",
+      "risk_count": 1,
+      "risks": [
+        {
+          "risk_name": "Nguy cơ stress nhiệt",
+          "risk_score": 0.86,
+          "matched_signals": [
+            "thở gấp",
+            "há mỏ",
+            "nóng"
+          ],
+          "evidence": "Có dấu hiệu đàn gà chịu ảnh hưởng bởi nhiệt độ hoặc thông thoáng kém.",
+          "recommended_next_step": "Kiểm tra nhiệt độ, độ ẩm và hệ thống thông gió của chuồng.",
+          "rank": 1
+        }
+      ],
+      "disclaimer": "Kết quả là đánh giá nguy cơ từ dữ liệu Mock, không phải chẩn đoán xác định. Hãy liên hệ bác sĩ thú y khi đàn có dấu hiệu nghiêm trọng."
+    },
+    "llm_latency_ms": 1715.94,
+    "tool_latency_ms": 1.0,
+    "latency_ms": 1716.94
+  },
+  {
+    "step": 2,
+    "query": "Đàn gà đang thở gấp, há mỏ và có dấu hiệu nóng. Hãy tra cứu nguy cơ trước, sau đó nếu phù hợp lập lịch kiểm tra nhiệt độ chuồng vào 14:00 15/09/2026.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "care_warning",
+    "arguments": {
+      "query": "Kiểm tra tình trạng đàn gà và điều kiện chuồng trại",
+      "datetime_str": "14:00 15/09/2026",
+      "disease_name": "Nguy cơ sức khỏe đàn gà"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "warning_id": "CARE-0002",
+      "task": "Kiểm tra tình trạng đàn gà và điều kiện chuồng trại",
+      "scheduled_at": "14:00 15/09/2026",
+      "risk_name": "Nguy cơ sức khỏe đàn gà",
+      "message": "Đã tạo cảnh báo chăm sóc 'Kiểm tra tình trạng đàn gà và điều kiện chuồng trại' vào lúc 14:00 15/09/2026 cho nguy cơ 'Nguy cơ sức khỏe đàn gà'."
+    },
+    "llm_latency_ms": 445.72,
+    "tool_latency_ms": 0.0,
+    "latency_ms": 445.72
+  },
+  {
+    "step": 3,
+    "query": "Đàn gà đang thở gấp, há mỏ và có dấu hiệu nóng. Hãy tra cứu nguy cơ trước, sau đó nếu phù hợp lập lịch kiểm tra nhiệt độ chuồng vào 14:00 15/09/2026.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "care_warning",
+    "arguments": {
+      "query": "Kiểm tra tình trạng đàn gà và điều kiện chuồng trại",
+      "datetime_str": "14:00 15/09/2026",
+      "disease_name": "Nguy cơ sức khỏe đàn gà"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "warning_id": "CARE-0003",
+      "task": "Kiểm tra tình trạng đàn gà và điều kiện chuồng trại",
+      "scheduled_at": "14:00 15/09/2026",
+      "risk_name": "Nguy cơ sức khỏe đàn gà",
+      "message": "Đã tạo cảnh báo chăm sóc 'Kiểm tra tình trạng đàn gà và điều kiện chuồng trại' vào lúc 14:00 15/09/2026 cho nguy cơ 'Nguy cơ sức khỏe đàn gà'."
+    },
+    "llm_latency_ms": 548.66,
+    "tool_latency_ms": 0.0,
+    "latency_ms": 548.66
+  },
+  {
+    "step": 4,
+    "query": "Đàn gà đang thở gấp, há mỏ và có dấu hiệu nóng. Hãy tra cứu nguy cơ trước, sau đó nếu phù hợp lập lịch kiểm tra nhiệt độ chuồng vào 14:00 15/09/2026.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "care_warning",
+    "arguments": {
+      "query": "Kiểm tra tình trạng đàn gà và điều kiện chuồng trại",
+      "datetime_str": "14:00 15/09/2026",
+      "disease_name": "Nguy cơ sức khỏe đàn gà"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "warning_id": "CARE-0004",
+      "task": "Kiểm tra tình trạng đàn gà và điều kiện chuồng trại",
+      "scheduled_at": "14:00 15/09/2026",
+      "risk_name": "Nguy cơ sức khỏe đàn gà",
+      "message": "Đã tạo cảnh báo chăm sóc 'Kiểm tra tình trạng đàn gà và điều kiện chuồng trại' vào lúc 14:00 15/09/2026 cho nguy cơ 'Nguy cơ sức khỏe đàn gà'."
+    },
+    "llm_latency_ms": 443.47,
+    "tool_latency_ms": 0.0,
+    "latency_ms": 443.47
+  },
+  {
+    "step": 5,
+    "query": "Đàn gà đang thở gấp, há mỏ và có dấu hiệu nóng. Hãy tra cứu nguy cơ trước, sau đó nếu phù hợp lập lịch kiểm tra nhiệt độ chuồng vào 14:00 15/09/2026.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "care_warning",
+    "arguments": {
+      "query": "Kiểm tra tình trạng đàn gà và điều kiện chuồng trại",
+      "datetime_str": "14:00 15/09/2026",
+      "disease_name": "Nguy cơ sức khỏe đàn gà"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "warning_id": "CARE-0005",
+      "task": "Kiểm tra tình trạng đàn gà và điều kiện chuồng trại",
+      "scheduled_at": "14:00 15/09/2026",
+      "risk_name": "Nguy cơ sức khỏe đàn gà",
+      "message": "Đã tạo cảnh báo chăm sóc 'Kiểm tra tình trạng đàn gà và điều kiện chuồng trại' vào lúc 14:00 15/09/2026 cho nguy cơ 'Nguy cơ sức khỏe đàn gà'."
+    },
+    "llm_latency_ms": 444.43,
+    "tool_latency_ms": 0.0,
+    "latency_ms": 444.43
+  },
+  {
+    "step": 6,
+    "query": "Đàn gà đang thở gấp, há mỏ và có dấu hiệu nóng. Hãy tra cứu nguy cơ trước, sau đó nếu phù hợp lập lịch kiểm tra nhiệt độ chuồng vào 14:00 15/09/2026.",
+    "action_type": "FINAL_ANSWER",
+    "thought": "Đã đạt MAX_ITERATIONS.",
+    "output": "Agent đã đạt giới hạn số vòng lặp nhưng chưa hoàn tất yêu cầu. Vui lòng cung cấp thêm thông tin hoặc thử lại.",
+    "latency_ms": 0.0
+  },
+  {
+    "step": 1,
+    "query": "Đàn gà có vẻ không ổn nhưng tôi chưa xác định được triệu chứng cụ thể. Tôi cần cung cấp thêm thông tin gì?",
+    "action_type": "FINAL_ANSWER",
+    "thought": "Câu hỏi chưa chứa triệu chứng hoặc yêu cầu lập lịch, nên chưa cần gọi Tool.",
+    "output": "[Mock Agent Response]: Tôi có thể hỗ trợ tra cứu nguy cơ sức khỏe đàn gà và lập lịch công việc chăm sóc.",
+    "latency_ms": 453.89
   }
 ]
