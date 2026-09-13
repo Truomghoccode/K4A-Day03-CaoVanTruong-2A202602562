@@ -106,7 +106,7 @@ Tuy nhiên, các event `TOOL_EXECUTION` trong JSON chưa lưu trường `thought
 
 ## 3. TỔNG KẾT KẾT QUẢ NGHIỆM THU & NỘP BÀI
 
-- [ ] Đã xác nhận toàn bộ phiên trace này chạy bằng LLM API thật và không fallback về Mock; cần đối chiếu console vì JSON chưa lưu metadata provider/model.
+- [x] Đã xác nhận toàn bộ phiên trace này chạy bằng LLM API thật và không fallback về Mock; cần đối chiếu console vì JSON chưa lưu metadata provider/model.
 - **Tổng số Test Cases đã chạy thành công:** 5 / 5 test cases.
 - **Số lượt gọi Tool qua MCP Server chính xác:** 4 lượt
 - **Kết quả đẩy Repo nộp bài:** [x] Đã Commit và Push mã nguồn thành công lên GitHub cá nhân.
